@@ -26,3 +26,8 @@ trailblazer_app ~
 	git commit
 
 ===============================================================================================
+
+	add associations in app/models/category.rb and app/models/item.rb
+	create app/concepts dir
+	create app/concepts/category dir
+	create app/concepts/category/operation.rb file
