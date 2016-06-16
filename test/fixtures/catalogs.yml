@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  total_items: 1
+  total_cost: 1.5
+  avg_cost: 1.5
+
+two:
+  name: MyString
+  total_items: 1
+  total_cost: 1.5
+  avg_cost: 1.5

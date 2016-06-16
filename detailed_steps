@@ -1,0 +1,28 @@
+espace ~
+	rails new trailblazer_app -d=postgresql
+	cd trailblazer_app
+
+trailblazer_app ~
+	vim .ruby-version #2.3.0
+	vim .ruby-gemset #trailblazer_app
+	cd ..
+
+espace ~
+	cd trailblazer_app
+
+trailblazer_app ~
+	vim detailed_steps
+	updating config/database.yml
+	bundle install
+	adding gems to GemFile
+	bundle install
+	rake db:create
+	bin/rails g model Catalog name:string total_items:integer total_cost:float avg_cost:float
+	bin/rails g model Item name:string description:string price:float catalog_id:integer
+	added restiction in migrations
+	rake db:migrate
+	git init
+	git add .
+	git commit
+
+===============================================================================================
