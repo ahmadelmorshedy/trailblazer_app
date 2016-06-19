@@ -42,3 +42,6 @@ trailblazer_app ~
 								show.json.builder
 	implementing/copying content for previous views/catalogs/ files
 	git commit=================================================================================
+
+	adding comments to app/controllers/catalogs_controller and app/concepts/catalog/operation.rb
+	git commit=================================================================================

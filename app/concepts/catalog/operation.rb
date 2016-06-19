@@ -4,9 +4,9 @@ class Catalog < ActiveRecord::Base
 		# process method is called when Operation is run
 		# it takes params as a parameter
 		def process(params)
-			puts "Hassanein: #{params.inspect}"
+			# Here I've just called the new method to create a new Catalog
+			# it's not the best practice using trailblazer as we'll see later :D 
 			@model = Catalog.new(name: params[:name])
-			# x = y + 4
 			@model.save
 		end
 	end
