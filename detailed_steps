@@ -23,11 +23,7 @@ trailblazer_app ~
 	rake db:migrate
 	git init
 	git add .
-	git commit
+	git commit=================================================================================
 
-===============================================================================================
-
-	add associations in app/models/category.rb and app/models/item.rb
-	create app/concepts dir
-	create app/concepts/category dir
-	create app/concepts/category/operation.rb file
+	add associations in app/models/catalog.rb and app/models/item.rb
+	git commit=================================================================================
