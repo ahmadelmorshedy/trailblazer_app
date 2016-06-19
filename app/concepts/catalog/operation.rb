@@ -10,4 +10,15 @@ class Catalog < ActiveRecord::Base
 			@model.save
 		end
 	end
+
+	class Update  < Trailblazer::Operation
+		# Here i'll implement the Update Class from scratch, better is to use inheritance
+		# and inherit from Create class (implemented further)
+		def process(params)
+			# find catalog per id
+			@model = Catalog.find(params[:id].to_i)
+			# update it
+			@model.update(name: params[:catalog][:name])
+		end
+	end
 end

@@ -45,3 +45,9 @@ trailblazer_app ~
 
 	adding comments to app/controllers/catalogs_controller and app/concepts/catalog/operation.rb
 	git commit=================================================================================
+
+	creating Class Update in app/concepts/catalog/operation.rb, under class Catalog
+	creating method edit in catalogs_controller
+	creating method update in catalogs_controller
+	creating file edit.html.erb in app/views/catalogs
+	git commit=================================================================================

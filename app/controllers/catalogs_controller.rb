@@ -10,6 +10,11 @@ class CatalogsController < ApplicationController
     @catalog = Catalog.find(params[:id])
   end
 
+  # GET /catalogs/:id/edit
+  def edit
+    @catalog = Catalog.find(params[:id])
+  end
+
   # POST /catalogs
   # POST /catalogs.json
   def create
@@ -29,6 +34,22 @@ class CatalogsController < ApplicationController
         format.json { render :show, status: :created, location: @catalog }
       else
         format.html { render :new }
+        format.json { render json: op.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /catalogs/1
+  # PATCH/PUT /catalogs/1.json
+  def update
+    result, op = Catalog::Update.run(params)
+    respond_to do |format|
+      if result
+        @catalog = op.model
+        format.html { redirect_to @catalog, notice: 'Catalog was successfully updated.' }
+        format.json { render :show, status: :ok, location: @catalog }
+      else
+        format.html { render :edit }
         format.json { render json: op.errors, status: :unprocessable_entity }
       end
     end
