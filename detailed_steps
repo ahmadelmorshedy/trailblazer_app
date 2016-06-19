@@ -53,4 +53,10 @@ trailblazer_app ~
 	git commit=================================================================================
 
 	fixing minor Bug
-	git commit=================================================================================	
+	git commit=================================================================================
+
+	adding destroy method to catalogs_controller
+	adding Destroy class to operation
+	add index method to catalogs_controller
+	add index.html.erb to app/views/catalogs
+	added destroy link in show page

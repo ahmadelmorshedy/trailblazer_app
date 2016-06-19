@@ -1,4 +1,12 @@
 class CatalogsController < ApplicationController
+  # GET /catalogs
+  # GET /catalogs.json
+  def index
+    # since it's for now just a model selection, we can make it here without calling an 
+    # operation, maybe it'll be changed further
+    @catalogs = Catalog.all
+  end
+
   # GET /catalogs/new
   def new
   	@catalog = Catalog.new
@@ -7,6 +15,8 @@ class CatalogsController < ApplicationController
   # GET /catalogs/:id
   # GET /catalogs/:id.json
   def show
+    # since it's for now just a model selection, we can make it here without calling an 
+    # operation, maybe it'll be changed further
     @catalog = Catalog.find(params[:id])
   end
 
@@ -52,6 +62,16 @@ class CatalogsController < ApplicationController
         format.html { render :edit }
         format.json { render json: op.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  # DELETE /catalogs/:id
+  # DELETE /catalogs/:id.json
+  def destroy
+    result, op = Catalog::Destroy.run(params)
+    respond_to do |format|
+      format.html { redirect_to catalogs_url, notice: 'Catalog was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 end

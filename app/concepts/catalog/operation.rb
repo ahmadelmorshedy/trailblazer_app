@@ -21,4 +21,11 @@ class Catalog < ActiveRecord::Base
 			@model.update(params[:catalog].to_hash)
 		end
 	end
+
+	class Destroy < Trailblazer::Operation
+		def process(params)
+			@model = Catalog.find(params[:id].to_i)
+			@model.destroy
+		end
+	end 
 end
