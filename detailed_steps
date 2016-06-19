@@ -27,3 +27,18 @@ trailblazer_app ~
 
 	add associations in app/models/catalog.rb and app/models/item.rb
 	git commit=================================================================================
+
+	create app/concepts dir
+	create app/concepts/catalog dir
+	create app/concepts/catalog/operation.rb file
+	create app/controllers/catalogs_controller.rb file
+	adding routes for catalogs, items
+	implementing new and create methods in catalogs_controller, create runs operation
+	Defining and implementing Class Create in operation.rb, under Class Catalog
+	Creating app/views/catalogs dir
+	Creating app/views/catalogs/_form.html.erb
+								new.html.erb
+								show.html.erb
+								show.json.builder
+	implementing/copying content for previous views/catalogs/ files
+	git commit=================================================================================
