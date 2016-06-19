@@ -22,7 +22,7 @@ class CatalogsController < ApplicationController
     # HTTP lean points, responsible for getting the HTTP request, and calling the 
     # corresponding ooperation, it should have minimal business logic, the business  logic
     # is moved to the operation
-    result, op = Catalog::Create.run(params[:catalog]) # run Catalog::Create
+    result, op = Catalog::Create.run(params) # run Catalog::Create
     # I've used .run form to call the operation, .run has two return values, the 'result' carries
     # wether the operation was successful (true) or not, and 'op' carries the operation object
 

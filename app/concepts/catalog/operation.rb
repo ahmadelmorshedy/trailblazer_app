@@ -6,7 +6,7 @@ class Catalog < ActiveRecord::Base
 		def process(params)
 			# Here I've just called the new method to create a new Catalog
 			# it's not the best practice using trailblazer as we'll see later :D 
-			@model = Catalog.new(name: params[:name])
+			@model = Catalog.new(params[:catalog].to_hash)
 			@model.save
 		end
 	end
@@ -18,7 +18,7 @@ class Catalog < ActiveRecord::Base
 			# find catalog per id
 			@model = Catalog.find(params[:id].to_i)
 			# update it
-			@model.update(name: params[:catalog][:name])
+			@model.update(params[:catalog].to_hash)
 		end
 	end
 end

@@ -51,3 +51,6 @@ trailblazer_app ~
 	creating method update in catalogs_controller
 	creating file edit.html.erb in app/views/catalogs
 	git commit=================================================================================
+
+	fixing minor Bug
+	git commit=================================================================================	
