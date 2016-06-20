@@ -49,9 +49,19 @@ class Catalog < ActiveRecord::Base
 	class Destroy < Trailblazer::Operation
 		# did not find corresponding model method, tried delete, destroy, remove
 		# anyway, you still can put you still can write your own business logic
+
+		# UPDATE >> you can override model! method, and use present instead of run
 		def process(params)
 			@model = Catalog.find(params[:id].to_i)
 			@model.destroy
+		end
+	end
+
+	class Index < Trailblazer::Operation
+		include Collection
+
+		def model!(params)
+			Catalog.all # This will set the @model instance variable to your collection.
 		end
 	end
 end

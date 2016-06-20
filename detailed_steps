@@ -73,7 +73,7 @@ trailblazer_app ~
 	changed item form so that it accepts float numbers (step: 'any')
 	git commit=================================================================================
 
-	adding Validdations
+	adding Validations
 		adding file app/concepts/catalog/contract.rb
 		adding file app/concepts/item/contract.rb
 		using contract validation in catalog and item operations
@@ -99,4 +99,9 @@ trailblazer_app ~
 			changed Back url to point to items_path instead of catalogs_path
 	git commit=================================================================================
 
+	Adding Index trailblazer Class to Catalog and Item
+		changes in catalogs/operation and items/operation >> adding Index class
+		changes in controllers files >> calling present Catalog/Item::Index
+		changes in index.html.rb files: using @model instead @catalogs and @items
+	git commit=================================================================================
 	

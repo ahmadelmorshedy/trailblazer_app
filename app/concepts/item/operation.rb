@@ -37,5 +37,13 @@ class Item < ActiveRecord::Base
 			@model = Item.find(params[:id].to_i)
 			@model.destroy
 		end
-	end 
+	end
+
+	class Index < Trailblazer::Operation
+		include Collection
+
+		def model!(params)
+			Item.all # This will set the @model instance variable to your collection.
+		end
+	end
 end

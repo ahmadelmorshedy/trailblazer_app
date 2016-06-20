@@ -2,9 +2,9 @@ class CatalogsController < ApplicationController
   # GET /catalogs
   # GET /catalogs.json
   def index
-    # since it's for now just a model selection, we can make it here without calling an 
-    # operation, maybe it'll be changed further
-    @catalogs = Catalog.all
+    # Since index operation is implelemnted by overriding model! ,
+    # it's called using Present not Run 
+    present Catalog::Index
   end
 
   # GET /catalogs/new
