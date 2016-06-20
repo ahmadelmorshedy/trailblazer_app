@@ -1,18 +1,34 @@
 class Item < ActiveRecord::Base
 	class Create < Trailblazer::Operation
+		# Setting Model
+		include Model;
+		model Item, :create
+		# Setting Contract
+		contract Item::Contract::Create
 
 		def process(params)
-			@model = Item.new(params[:item].to_hash)
-			@model.save
+			validate(params[:item].to_hash) do |i|
+				i.save
+			end
 		end
 	end
 
+	class Show < Trailblazer::Operation
+		include Model
+    	model Item, :find
+	end
+
 	class Update  < Trailblazer::Operation
+		# Setting the Model
+		include Model;
+		model Item, :update 
+		# Setting the Contract
+		contract Item::Contract::Update
+
 		def process(params)
-			# find item per id
-			@model = Item.find(params[:id].to_i)
-			# update it
-			@model.update(params[:item].to_hash)
+			validate(params[:item].to_hash) do |i|
+				i.save
+			end
 		end
 	end
 

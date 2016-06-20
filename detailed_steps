@@ -70,4 +70,33 @@ trailblazer_app ~
 	*	Added index.json.builder for both catalogs views and items views
 	git commit=================================================================================
 	
-	changed item form so that it accepts ffloat numbers (step: 'any')
+	changed item form so that it accepts float numbers (step: 'any')
+	git commit=================================================================================
+
+	adding Validdations
+		adding file app/concepts/catalog/contract.rb
+		adding file app/concepts/item/contract.rb
+		using contract validation in catalog and item operations
+	More Trailblazer Style
+		app/concepts/catalog/operation
+			using Model methods: create, find, update
+			adding class Show
+		Same as above for item/operation file
+		app/controllers/catalogs_controller
+			using Trailblazer in more actions
+			using "form" and "present" trailblazer methods
+		Same as above for items_controllers
+		app/views/catalogs/_form.html.erb
+			changed @catalog to @form to meet trailblazer configuration
+		Same as above for app/views/items/_form.html.erb
+		app/views/catalogs/edit.html.erb
+			link_to 'Show', @form instead of link_to 'Show', @catalog
+		app/views/items/edit.html.erb
+			link_to 'Show', @form instead of link_to 'Show', @item 
+	Fixing Errors
+		app/views/items/edit
+			changed Title (was Editing Catalog)
+			changed Back url to point to items_path instead of catalogs_path
+	git commit=================================================================================
+
+	
