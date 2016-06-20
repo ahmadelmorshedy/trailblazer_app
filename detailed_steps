@@ -60,3 +60,12 @@ trailblazer_app ~
 	add index method to catalogs_controller
 	add index.html.erb to app/views/catalogs
 	added destroy link in show page
+	git commit=================================================================================
+
+	new folder app/concepts/item
+	new file app/concepts/item/operation.rb
+	new file app/controller/items_controller.rb
+	new folder app/views/items
+	repeat what we did for catalogs
+	*	Added index.json.builder for both catalogs views and items views
+	git commit=================================================================================
