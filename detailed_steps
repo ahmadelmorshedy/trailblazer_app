@@ -69,3 +69,5 @@ trailblazer_app ~
 	repeat what we did for catalogs
 	*	Added index.json.builder for both catalogs views and items views
 	git commit=================================================================================
+	
+	changed item form so that it accepts ffloat numbers (step: 'any')
