@@ -43,10 +43,10 @@ gem "reform", "~> 2.1.0"
 gem "reform-rails"
 
 # gem "cells"
-# gem "cells-rails"
+gem "cells-rails"
 gem "cells-erb"
-gem "cells-slim"
-gem "cells-haml"
+# gem "cells-slim"
+# gem "cells-haml"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

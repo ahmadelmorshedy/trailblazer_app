@@ -111,4 +111,10 @@ trailblazer_app ~
 		adding some initializers (file config/initializers/trailblazer.rb)
 	git commit=================================================================================
 	
-		
+	Adding Cells - proof of concept
+		added "cells-rails" gem
+		removed "cells-slim", "cells-haml" gems
+		app/views/catalogs/show.html.erb just displays the notice and calls cell
+		Added file app/concepts/catalog/cell.rb
+		Added directory app/concepts/catalog/views
+		Added file app/concepts/catalog/views/show.erb
