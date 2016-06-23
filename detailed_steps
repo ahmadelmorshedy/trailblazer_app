@@ -105,3 +105,10 @@ trailblazer_app ~
 		changes in index.html.rb files: using @model instead @catalogs and @items
 	git commit=================================================================================
 	
+	Adding Callbacks
+		added file app/concepts/item/callback.rb
+		adding callback setting and dispatch in item operation file
+		adding some initializers (file config/initializers/trailblazer.rb)
+	git commit=================================================================================
+	
+		

@@ -6,9 +6,25 @@ class Item < ActiveRecord::Base
 		# Setting Contract
 		contract Item::Contract::Create
 
+		# Setting callback
+		# no need to "include Dispatch", since it's included in the initializer
+		callback :item_saved, Callback::ItemSave
+		# there are several methods to perform callbacks
+		# 	1. Define a method in operation file, and just call it
+		# 		before/after saving the model
+		# 	2. Set and Define callback/callback methods into operation file
+		# 			include Dispatch
+		# 			callback :after_save do
+		# 				on_change :notify!
+		# 			end
+		# 		Then define method notify! into operation.rb file
+		# 	3. Define callback methods and triggers into an external callback
+		# 		file, and include it here by definition (that's the method used)
+
 		def process(params)
 			validate(params[:item].to_hash) do |i|
 				i.save
+				dispatch!(:item_saved)
 			end
 		end
 	end
@@ -25,9 +41,14 @@ class Item < ActiveRecord::Base
 		# Setting the Contract
 		contract Item::Contract::Update
 
+		# Setting callback
+		# include Dispatch
+		callback :item_saved, Callback::ItemSave
+
 		def process(params)
 			validate(params[:item].to_hash) do |i|
 				i.save
+				dispatch!(:item_saved)
 			end
 		end
 	end
