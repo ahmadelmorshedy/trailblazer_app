@@ -1,0 +1,21 @@
+<h1>Listing Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Catalog</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= concept("item/cell/index_item", collection: @model) %>
+  </tbody>
+</table>
+
+<br>
+
+<%= create_link %>

@@ -142,3 +142,19 @@ trailblazer_app ~
 				(using collection)
 		added file app/concepts/catalog/view/index.erb (renders single catalog item)
 	git commit=================================================================================
+
+	Adding Cells for item
+		Added file app/concepts/item/cell.rb, containing classes for New, Show,
+			Edit, Index, and ItemIndex, and a BasicItemCell class acting as an
+			abstract class
+		Added folder app/concepts/item/view
+			added app/concepts/item/view > _form.erb
+			added app/concepts/item/view > edit.erb
+			added app/concepts/item/view > index.erb
+			added app/concepts/item/view > index_item.erb
+			added app/concepts/item/view > new.erb
+			added app/concepts/item/view > show.erb
+		deleted app/views/items/_form.html.erb file, no use for it
+		files app/views/items/[edit,index,new,show].html.erb were modified, they
+			now call the cell
+	git commit=================================================================================
