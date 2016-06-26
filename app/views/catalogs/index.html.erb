@@ -14,17 +14,8 @@
   </thead>
 
   <tbody>
-    <% @model.each do |catalog| %>
-      <tr>
-        <td><%= catalog.name %></td>
-        <td><%= catalog.total_items %></td>
-        <td><%= catalog.total_cost %></td>
-        <td><%= catalog.avg_cost %></td>
-        <td><%= link_to 'Show', catalog %></td>
-        <td><%= link_to 'Edit', edit_catalog_path(catalog) %></td>
-        <td><%= link_to 'Destroy', catalog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <!-- using collection concept -->
+    <%= concept("catalog/cell/index", collection: @model) %>
   </tbody>
 </table>
 

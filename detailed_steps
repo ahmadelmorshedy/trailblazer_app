@@ -125,3 +125,20 @@ trailblazer_app ~
 		Renaming folder app/concepts/catalog/views to /view
 		modified cell invocation in app/views/catalogs/show.html.erb
 	git commit=================================================================================
+
+	Trailblazer::Cell for Catalog
+		Added Class New in app/concepts/catalog/cell.rb
+		app/views/catalogs/new.html.erb now calls corresponding cell
+		added file app/concepts/catalog/view/new.erb
+		added file app/concepts/catalog/view/_form.erb # underscore is used for convenience
+		deleted file app/views/catalogs/_form.html.erb
+
+		Added Class Edit in app/concepts/catalog/cell.rb (Inherits from New)
+		app/views/catalogs/edit.html.erb now calls corresponding cell
+		added file app/concepts/catalog/view/edit.erb
+
+		Added Class Index in app/concepts/catalog/cell.rb
+		app/views/catalogs/index.html.erb now calls index cell partially 
+				(using collection)
+		added file app/concepts/catalog/view/index.erb (renders single catalog item)
+	git commit=================================================================================
