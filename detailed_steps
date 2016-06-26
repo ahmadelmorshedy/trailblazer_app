@@ -118,3 +118,10 @@ trailblazer_app ~
 		Added file app/concepts/catalog/cell.rb
 		Added directory app/concepts/catalog/views
 		Added file app/concepts/catalog/views/show.erb
+	git commit=================================================================================
+
+	Using Trailblazer::Cell
+		changed app/concepts/catalog/cell.rb to a module containing class(es)
+		Renaming folder app/concepts/catalog/views to /view
+		modified cell invocation in app/views/catalogs/show.html.erb
+	git commit=================================================================================
