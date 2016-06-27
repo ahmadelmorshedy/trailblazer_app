@@ -158,3 +158,12 @@ trailblazer_app ~
 		files app/views/items/[edit,index,new,show].html.erb were modified, they
 			now call the cell
 	git commit=================================================================================
+
+	Fixing project explosion
+		Uninstalled All gems
+		Deleted Gemfile.lock
+		gem install bundler
+		bundle install
+		commented include ActionView::Helpers::FormHelper from cell files
+		Run correctly???
+	git commit=================================================================================

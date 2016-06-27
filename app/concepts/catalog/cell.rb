@@ -9,7 +9,7 @@
 # Cells are faster than ActionView. While exposing a better performance, 
 # you step-wise encapsulate fragments into cell widgets and enforce interfaces.
 
-include ActionView::Helpers::FormHelper # https://github.com/apotonick/cells/issues/260
+# include ActionView::Helpers::FormHelper # https://github.com/apotonick/cells/issues/260
 
 module Catalog::Cell #making it two nested modules made an error
 	class Show < Trailblazer::Cell

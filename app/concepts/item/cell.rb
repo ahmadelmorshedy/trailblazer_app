@@ -1,4 +1,4 @@
-include ActionView::Helpers::FormHelper # https://github.com/apotonick/cells/issues/260
+# include ActionView::Helpers::FormHelper # https://github.com/apotonick/cells/issues/260
 
 include ActionView::Helpers::FormOptionsHelper # https://gitter.im/trailblazer/chat/archives/2016/02/11
 
