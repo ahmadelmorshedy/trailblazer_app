@@ -167,3 +167,52 @@ trailblazer_app ~
 		commented include ActionView::Helpers::FormHelper from cell files
 		Run correctly???
 	git commit=================================================================================
+
+	Adding Users
+		added 'devise' to Gemfile
+		bundle install
+			Installing bcrypt 3.1.11 with native extensions
+			Installing orm_adapter 0.5.0
+			Installing warden 1.2.6
+			Installing responders 2.2.0
+			Installing devise 4.1.1
+		-> Still running
+		rails generate devise:install
+			create  config/initializers/devise.rb
+			create  config/locales/devise.en.yml
+		rails generate devise user
+			invoke  active_record
+			create    db/migrate/20160628192929_devise_create_users.rb
+			create    app/models/user.rb
+			invoke    test_unit
+			create      test/models/user_test.rb
+			create      test/fixtures/users.yml
+			insert    app/models/user.rb
+			route  devise_for :users (changing config/route.rb)
+		rake db:migrate
+		rails generate devise:views users
+			invoke  Devise::Generators::SharedViewsGenerator
+			create    app/views/users/shared
+			create    app/views/users/shared/_links.html.erb
+			invoke  form_for
+			create    app/views/users/confirmations
+			create    app/views/users/confirmations/new.html.erb
+			create    app/views/users/passwords
+			create    app/views/users/passwords/edit.html.erb
+			create    app/views/users/passwords/new.html.erb
+			create    app/views/users/registrations
+			create    app/views/users/registrations/edit.html.erb
+			create    app/views/users/registrations/new.html.erb
+			create    app/views/users/sessions
+			create    app/views/users/sessions/new.html.erb
+			create    app/views/users/unlocks
+			create    app/views/users/unlocks/new.html.erb
+			invoke  erb
+			create    app/views/users/mailer
+			create    app/views/users/mailer/confirmation_instructions.html.erb
+			create    app/views/users/mailer/password_change.html.erb
+			create    app/views/users/mailer/reset_password_instructions.html.erb
+			create    app/views/users/mailer/unlock_instructions.html.erb
+		-> Still running (i think)
+
+	git commit=================================================================================	
