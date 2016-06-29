@@ -1,1 +1,6 @@
 <%= concept("item/cell/new", @form) %>
+<!-- to pass arguments to cell, we can append .(:show, user: current_user)
+to the previous line, where :show is the method name, then follows the
+arguments passed, passing current_user was useful if you need to include
+user's id in the form fields, Or you can set user_id in the operation as 
+implemented here (see app/concept/item/operation.rb) -->

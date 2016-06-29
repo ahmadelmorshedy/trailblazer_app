@@ -6,6 +6,10 @@ class Item < ActiveRecord::Base
 		# Setting Contract
 		contract Item::Contract::Create
 
+		#setting Policy
+		include Trailblazer::Operation::Policy
+		policy Item::Policy, :create? #this line runs the policy check before new action
+
 		# Setting callback
 		# no need to "include Dispatch", since it's included in the initializer
 		callback :item_saved, Callback::ItemSave
@@ -22,9 +26,12 @@ class Item < ActiveRecord::Base
 		# 		file, and include it here by definition (that's the method used)
 
 		def process(params)
-			validate(params[:item].to_hash) do |i|
-				i.save
-				dispatch!(:item_saved)
+			if policy.create? #TODO >> be sure what this do exactly, probably just an additional check after policy setting line
+				validate(params[:item].to_hash) do |i|
+					i.user_id = params[:current_user].id #set user_id
+					i.save
+					dispatch!(:item_saved)
+				end
 			end
 		end
 	end

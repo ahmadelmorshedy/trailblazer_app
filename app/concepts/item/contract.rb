@@ -12,6 +12,7 @@ module Item::Contract
 		# without it, item create/edit form shows an error that:
 		# undefined method `description' for #<#<Class:0x007f3ea86f4b98>:0x007f3eb835a838>
 		property :catalog_id
+		property :user_id # so that we can set it into the operation
 		
 		validates :name, unique: true, length: { minimum: 6 }
 		validates :price, numericality: true

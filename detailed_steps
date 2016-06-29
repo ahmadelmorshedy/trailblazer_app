@@ -216,3 +216,15 @@ trailblazer_app ~
 		-> Still running (i think)
 
 	git commit=================================================================================	
+
+	Using Policy ... show case
+		rails generate migration AddUserIdToCatalogsAndItems #category user_id not used
+		rake db:migrate
+		added file app/concepts/item/policy.rb
+		added user_id property to item contract
+		setup and use item policy in item operation, and update uitem user_id
+		added current_user (Devise method, accessed in controllers and views) in
+			params (so that it can be passed automatically to policy 
+			constructor)
+		Added corresponding associations in models
+	git commit=================================================================================		

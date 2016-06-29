@@ -7,7 +7,12 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-  	form Item::Create
+    params[:current_user] = current_user
+    begin
+    	form Item::Create
+    rescue
+      render text: "Unauthorized..."
+    end
   end
 
   # GET /items/:id
@@ -25,6 +30,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
+    params[:current_user] = current_user
     respond_to do |format|
       run Item::Create do |op|
         format.html { redirect_to op.model, notice: 'Item was successfully created.' }
