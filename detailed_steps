@@ -227,4 +227,13 @@ trailblazer_app ~
 			params (so that it can be passed automatically to policy 
 			constructor)
 		Added corresponding associations in models
-	git commit=================================================================================		
+	git commit=================================================================================	
+
+	Testing...
+		add "minitest-rails" to Gemfile
+		bundle install
+		added folder test/concepts
+		added folder test/concepts/catalog
+		added file test/concepts/catalog/creation_test
+		commented fixture files
+	git commit=================================================================================
